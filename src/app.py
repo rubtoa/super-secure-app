@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 import subprocess
 
+
 '''
     a flask app to demo command injection vulnerability
 '''
@@ -44,8 +45,6 @@ def execute_command():
 
     out = f"{banner}{command_line}{buff}"
     return out
-
-
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=12345)

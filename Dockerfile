@@ -11,10 +11,12 @@ WORKDIR /app
 RUN pip install -r requirements.txt
 
 # copy every content from the local file to the image
-COPY . /app
+COPY src /app
+
+EXPOSE 12345
 
 # configure the container to run in an executed manner
-EXPOSE 12345
+
 
 ENTRYPOINT [ "python" ]
 CMD ["app.py" ]
